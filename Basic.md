@@ -6,6 +6,19 @@
 
 [Difference between Private key and Public key Cryptography] https://www.geeksforgeeks.org/difference-between-private-key-and-public-key/
 
+
+---
+
+### Hashing and Salting
+
+https://auth0.com/blog/hashing-passwords-one-way-road-to-security/
+
+https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
+
+[https://www.thesslstore.com/blog/difference-encryption-hashing-salting/] https://www.thesslstore.com/blog/difference-encryption-hashing-salting/
+
+[What is Hashing] (Must Watch) https://www.youtube.com/watch?v=2BldESGZKB8
+
 ---
 
 [Digital Signatures and Certificates] https://www.geeksforgeeks.org/digital-signatures-certificates/
