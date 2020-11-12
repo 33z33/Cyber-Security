@@ -28,7 +28,20 @@ https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
 
 [Digital Signature] https://www.youtube.com/watch?v=y6e70OKHg7c
 
-A digital signature is a mathematical technique which validates the authenticity and integrity of a message, software or digital documents. It allows us to verify the author name, date and time of signatures, and authenticate the message contents.
+[How Digital Signatures Work] (Must Watch) https://www.youtube.com/watch?v=JR4_RBb8A9Q
+
+A digital signature is a mathematical technique which validates integrity of a message, software or digital documents. A digital signature 
+doesn't guarantee the authenticity of the message, meaning it can't make sure whether the message is from real owner or intended sender or not. Ensuring the 
+authenticity is the work of Digital Certificate. 
+
+The steps which are followed in creating a digital signature are:
+
+1. Select a file to be digitally signed.
+2. The hash value of the message or file content is calculated. This message or file content is encrypted by using a private key of a sender to form the digital signature.
+3. Now, the original message or file content along with the digital signature is transmitted.
+4. The receiver decrypts the digital signature by using a public key of a sender.
+5. The receiver now has the message or file content and can compute it.
+6. Comparing these computed message or file content with the original computed message. The comparison needs to be the same for ensuring integrity.
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/3-56.png">
 
