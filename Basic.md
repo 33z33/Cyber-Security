@@ -55,3 +55,11 @@ The steps which are followed in creating a digital signature are:
 
 Digital certificates are electronic credentials that bind the identity of the certificate owner to a pair of electronic encryption keys, (one public and one private), that can be used to encrypt and sign information digitally. The main purpose of the digital certificate is to ensure that the public key contained in the certificate belongs to the entity to which the certificate was issued, in other words, to verify that a person sending a message is who he or she claims to be, and to then provide the message receiver with the means to encode a reply back to the sender.
 
+The Certificate Authority (CA) packages together in the one certificate the public keys, information about the encryption algorithms used, the owner or subject data, the digital signature of a Certificate Authority that has verified the subject data itself, and a date range during which the certificate can be considered valid. Digital Certificates can be used for a variety of electronic transactions including e-mail, electronic commerce, groupware and electronic funds transfers.
+
+
+The most widely accepted format for Digital Certificates is defined by the CCITT **X.509** international standard
+
+[X.509] https://www.youtube.com/watch?v=JAgaWJivKwg
+
+
