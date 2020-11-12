@@ -32,3 +32,9 @@ A digital signature is a mathematical technique which validates the authenticity
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/3-56.png">
 
+### Digital Certificate
+
+[What is Digital Certificate] (Must Read) https://help.utk.edu/kb/index.php?func=show&e=1960
+
+Digital certificates are electronic credentials that bind the identity of the certificate owner to a pair of electronic encryption keys, (one public and one private), that can be used to encrypt and sign information digitally. The main purpose of the digital certificate is to ensure that the public key contained in the certificate belongs to the entity to which the certificate was issued, in other words, to verify that a person sending a message is who he or she claims to be, and to then provide the message receiver with the means to encode a reply back to the sender.
+
