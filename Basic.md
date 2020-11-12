@@ -1,3 +1,10 @@
+
+CIA Triad The CIA triad in Cryptography 
+
+https://www.geeksforgeeks.org/the-cia-triad-in-cryptography/
+
+---
+
 - **Authentication**- It is any process by which a system verifies the identity of a user who wishes to access it.
 - **Non- repudiation**– It means to ensure that a transferred message has been sent and received by the parties claiming to have sent and received the message. Non-repudiation is a way to guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message.
 - **Integrity**– to ensure that the message was not altered during the transmission.
