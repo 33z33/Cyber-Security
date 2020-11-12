@@ -31,8 +31,8 @@ https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
 [How Digital Signatures Work] (Must Watch) https://www.youtube.com/watch?v=JR4_RBb8A9Q
 
 A digital signature is a mathematical technique which validates integrity of a message, software or digital documents. A digital signature 
-doesn't guarantee the authenticity of the message, meaning it can't make sure whether the message is from real owner or intended sender or not. Ensuring the 
-authenticity is the work of Digital Certificate. 
+doesn't guarantee the authenticity of the message, meaning it can't make sure whether the message is from real owner or intended sender or not. It doesn't verify the
+true identity of the sender and his public key, but use of Digital certificate does that. 
 
 The steps which are followed in creating a digital signature are:
 
@@ -50,6 +50,8 @@ The steps which are followed in creating a digital signature are:
 [What is Digital Certificate] (Must Read) https://help.utk.edu/kb/index.php?func=show&e=1960
 
 [Working of Digital Certificates Explained ] (Must Watch) https://www.youtube.com/watch?v=5rT6fZUwhG8
+
+[Why digital certificate?] (Must Watch) https://www.youtube.com/watch?v=UbMlPIgzTxc
 
 Digital certificates are electronic credentials that bind the identity of the certificate owner to a pair of electronic encryption keys, (one public and one private), that can be used to encrypt and sign information digitally. The main purpose of the digital certificate is to ensure that the public key contained in the certificate belongs to the entity to which the certificate was issued, in other words, to verify that a person sending a message is who he or she claims to be, and to then provide the message receiver with the means to encode a reply back to the sender.
 
