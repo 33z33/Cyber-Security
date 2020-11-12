@@ -6,4 +6,11 @@
 
 [Difference between Private key and Public key Cryptography] https://www.geeksforgeeks.org/difference-between-private-key-and-public-key/
 
+---
+
 [Digital Signatures and Certificates] https://www.geeksforgeeks.org/digital-signatures-certificates/
+
+
+Digital Signature
+
+A digital signature is a mathematical technique which validates the authenticity and integrity of a message, software or digital documents. It allows us to verify the author name, date and time of signatures, and authenticate the message contents
