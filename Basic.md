@@ -65,6 +65,24 @@ plaintext.
 
 [Difference between Private key and Public key Cryptography] https://www.geeksforgeeks.org/difference-between-private-key-and-public-key/
 
+---
+
+### Encryption Techniques - Substitution and Transposition
+
+The two basic building blocks of all encryption techniques are substitution
+and transposition
+
+#### Substitution
+
+A substitution technique is one in which the letters of plaintext are replaced
+by other letters or by numbers or symbols. If the plaintext is viewed as a sequence
+of bits, then substitution involves replacing plaintext bit patterns with ciphertext bit
+patterns. **Caeser Cipher** is an example of substitution cipher. 
+
+
+#### Transposition
+
+
 
 ---
 
