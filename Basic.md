@@ -5,9 +5,61 @@ https://www.geeksforgeeks.org/the-cia-triad-in-cryptography/
 
 ---
 
+Before beginning, we define some terms. An original message is known as the
+**plaintext**, while the coded message is called the **ciphertext**. The process of converting
+from plaintext to ciphertext is known as enciphering or **encryption**; restoring the
+plaintext from the ciphertext is deciphering or **decryption**. The many schemes used
+for encryption constitute the area of study known as **cryptography**. Such a scheme
+is known as a **cryptographic system** or a **cipher**. Techniques used for deciphering a
+message without any knowledge of the enciphering details fall into the area of **cryptanalysis**.
+Cryptanalysis is what the layperson calls “breaking the code.” The areas of
+cryptography and cryptanalysis together are called **cryptology**.
+
+**Cryptographic systems** are characterized along three independent dimensions:
+
+1. **The type of operations used for transforming plaintext to ciphertext**. All
+encryption algorithms are based on two general principles: **substitution**,
+in which each element in the plaintext (bit, letter, group of bits or letters)
+is mapped into another element, and **transposition**, in which elements
+in the plaintext are rearranged. The fundamental requirement is that no
+information be lost (i.e., that all operations are reversible). Most systems,
+referred to as product systems, involve multiple stages of substitutions and
+transpositions.
+2. **The number of keys used**. If both sender and receiver use the same key, the
+system is referred to as symmetric, single-key, secret-key, or conventional
+encryption. If the sender and receiver use different keys, the system is referred
+to as asymmetric, two-key, or public-key encryption.
+3. **The way in which the plaintext is processed**. A block cipher processes the input
+one block of elements at a time, producing an output block for each input
+block. A stream cipher processes the input elements continuously, producing
+output one element at a time, as it goes along.
+
+---
+
 - **Authentication**- It is any process by which a system verifies the identity of a user who wishes to access it.
 - **Non- repudiation**– It means to ensure that a transferred message has been sent and received by the parties claiming to have sent and received the message. Non-repudiation is a way to guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message.
 - **Integrity**– to ensure that the message was not altered during the transmission.
+
+#### Symmetric Encryption 
+
+A symmetric encryption scheme has five ingredients:
+
+- ■ Plaintext: This is the original intelligible message or data that is fed into the
+algorithm as input.
+- ■ Encryption algorithm: The encryption algorithm performs various substitutions
+and transformations on the plaintext.
+- ■ Secret key: The secret key is also input to the encryption algorithm. The key is
+a value independent of the plaintext and of the algorithm. The algorithm will
+produce a different output depending on the specific key being used at the
+time. The exact substitutions and transformations performed by the algorithm
+depend on the key.
+- ■ Ciphertext: This is the scrambled message produced as output. It depends on
+the plaintext and the secret key. For a given message, two different keys will
+produce two different ciphertexts. The ciphertext is an apparently random
+stream of data and, as it stands, is unintelligible.
+- ■ Decryption algorithm: This is essentially the encryption algorithm run in
+reverse. It takes the ciphertext and the secret key and produces the original
+plaintext.
 
 [Symmetric (Private key Cryptographic) vs Asymmetric Encryption (Public Key Cryptographic)] https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences
 
