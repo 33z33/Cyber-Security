@@ -98,6 +98,58 @@ written down as a sequence of diagonals and then read off as a sequence of rows.
 
 ### Hashing and Salting
 
+A **hash function** `H` accepts a variable-length block of data `M` as input and produces
+a fixed-size hash value `h = H(M)`. A “good” hash function has the property that the
+results of applying the function to a large set of inputs will produce outputs that are
+evenly distributed and apparently random. 
+
+The kind of hash function needed for security applications is referred to as a
+**cryptographic hash function**. A cryptographic hash function is an algorithm for which
+it is computationally infeasible (i.e to find an attack significantly more efficient than
+brute force) to find either (a) a data object that maps to a pre-specified hash result
+(the one-way property) or (b) two data objects that map to the same hash result (the
+collision-free property). Because of these characteristics, hash functions are often used
+to determine whether or not data has changed
+
+Applications of cryptographic hash functions:
+
+- Message Authentication
+- Digital Signatures
+- Securing Password 
+
+#### Message Authentication
+
+Message authentication is a mechanism or service used to verify the integrity of
+a message. Message authentication assures that data received are exactly as sent
+(i.e., there is no modification, insertion, deletion, or replay). 
+
+When a hash function is used to provide message authentication,
+the hash function value is often referred to as a **message digest**.
+The essence of the use of a hash function for message integrity is as follows. The sender computes a hash value as a function of the bits in the message and transmits both the hash value and the message. The receiver performs the same hash calculation on the message bits and compares this value with the incoming hash value. If there is a mismatch, the receiver knows that the message (or possibly the hash
+value) has been altered. The hash value must be transmitted in a secure fashion. That is, the hash value
+must be protected so that if an adversary alters or replaces the message, it is not
+feasible for adversary to also alter the hash value to fool the receiver. 
+
+ Message authentication is achieved using a message
+ **authentication code (MAC)**, also known as a **keyed hash function**
+ A MAC function takes as input a secret key and
+a data block and produces a hash value, referred to as the MAC, which is associated with the protected message. If the integrity of the message needs to be checked,
+the MAC function can be applied to the message and the result compared with the
+ associated MAC value. An attacker who alters the message will be unable to alter the
+associated MAC value without knowledge of the secret key. Note that the verifying
+party also knows who the sending party is because no one else knows the secret key.
+
+#### Digital Signature 
+
+The operation of the digital signature is similar
+to that of the MAC. In the case of the digital signature, the hash value of a message is encrypted with a user’s private key. Anyone who knows the user’s public key can
+verify the integrity of the message that is associated with the digital signature. In
+this case, an attacker who wishes to alter the message would need to know the user’s
+private key. Note that, the implications of digital signatures go
+beyond just message authentication.
+
+#### Securing Passwords
+
 https://auth0.com/blog/hashing-passwords-one-way-road-to-security/
 
 https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
@@ -105,6 +157,14 @@ https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/
 [https://www.thesslstore.com/blog/difference-encryption-hashing-salting/] https://www.thesslstore.com/blog/difference-encryption-hashing-salting/
 
 [What is Hashing] (Must Watch) https://www.youtube.com/watch?v=2BldESGZKB8
+
+#### How are MAC and Digital Signature different
+
+MACs differ from digital signatures as MAC values are both generated and verified using the same secret key. This implies that the sender and receiver of a message must agree on the same key before initiating communications, as is the case with symmetric encryption. For the same reason, MACs do not provide the property of non-repudiation offered by signatures specifically in the case of a network-wide shared secret key: any user who can verify a MAC is also capable of generating MACs for other messages. In contrast, a digital signature is generated using the private key of a key pair, which is public-key cryptography. Since this private key is only accessible to its holder, a digital signature proves that a document was signed by none other than that holder. Thus, digital signatures do offer non-repudiation.
+
+https://security.stackexchange.com/questions/32114/what-is-the-difference-between-a-mac-and-a-digital-signiture
+
+https://crypto.stackexchange.com/questions/5646/what-are-the-differences-between-a-digital-signature-a-mac-and-a-hash
 
 ---
 
@@ -169,13 +229,6 @@ Public Key Infrastructure uses Public Key Cryptography as the basis for providin
 - Establishing the identity of endpoints on a network
 - Encrypting the flow of data via the network’s communication channels
 
-Consider the following exchange which enables a server and a web application, for instance, a browser, to communicate with each other:
-
-- When a browser wishes to establish a secure communication channel with a web server, it requests the server to present its public key.
-- The server possesses an asymmetric public key, whose copy it presents to the browser.
-- The browser generates a ‘session key’, a symmetric key that is encrypted using the public key that the server provided. This session key is then passed to the server.
-- The web server, uses its private key to decrypt the session key which was encrypted by its public key by the client. If it is able to do this an encrypted channel with client is opened.
-
 The exchange of public keys before the symmetric encryption channel is established is facilitated by X.509 certificates and CA, only those public keys that have been signed by a Certificate Authority and bound to a certificate are considered acceptable for use online.
 
 In broad terms, we can classify the use of **public-key cryptosystems** into
@@ -196,4 +249,11 @@ possible, involving the private key(s) of one or both parties/
 Some algorithms are suitable for all three applications, whereas others can be
 used only for one or two of these applications. Eg, `RSA` and `Elliptic Curve` encryption algorithms are suitable for all three applications,
 whereas `DSS` is suitable in only Digital Signature application.
+
+An example of *key exchange* PKI cryptosystem. Consider the following exchange which enables a server and a web application, for instance, a browser, to communicate with each other:
+
+- When a browser wishes to establish a secure communication channel with a web server, it requests the server to present its public key.
+- The server possesses an asymmetric public key, whose copy it presents to the browser.
+- The browser generates a ‘session key’, a symmetric key that is encrypted using the public key that the server provided. This session key is then passed to the server.
+- The web server, uses its private key to decrypt the session key which was encrypted by its public key by the client. If it is able to do this an encrypted channel with client is opened.
 
