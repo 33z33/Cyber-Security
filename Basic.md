@@ -190,7 +190,7 @@ The steps which are followed in creating a digital signature are:
 5. The receiver now has the message or file content and can compute it.
 6. Comparing these computed message or file content with the original computed message. The comparison needs to be the same for ensuring integrity.
 
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/3-56.png">
+<img width="650" src="https://user-images.githubusercontent.com/52335111/99152869-96316180-26ca-11eb-8d21-3e4134dd1f3b.PNG">
 
 ### Digital Certificate
 
