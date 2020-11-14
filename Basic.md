@@ -82,7 +82,17 @@ patterns. **Caeser Cipher** is an example of substitution cipher.
 
 #### Transposition
 
+. A very different kind of mapping is achieved by performing
+some sort of permutation on the plaintext letters. This technique is referred to as a
+transposition cipher.
+The simplest such cipher is the **rail fence technique**, in which the plaintext is
+written down as a sequence of diagonals and then read off as a sequence of rows.
 
+[Rail Fence Cipher – Encryption and Decryption] https://www.geeksforgeeks.org/rail-fence-cipher-encryption-decryption/
+
+[Transposition Cipher | Keyless Transposition Technique Explained with Solved] https://www.youtube.com/watch?v=j7QdpHO5N8U
+
+[Transposition Cipher | Columnar Transposition Technique Explained with Solved Example] https://www.youtube.com/watch?v=KczOjHHb5Nw
 
 ---
 
@@ -134,9 +144,26 @@ Digital certificates are electronic credentials that bind the identity of the ce
 
 The Certificate Authority (CA) packages together in the one certificate the public keys, information about the encryption algorithms used, the owner or subject data, the digital signature of a Certificate Authority that has verified the subject data itself, and a date range during which the certificate can be considered valid. Digital Certificates can be used for a variety of electronic transactions including e-mail, electronic commerce, groupware and electronic funds transfers.
 
-
 The most widely accepted format for Digital Certificates is defined by the CCITT **X.509** international standard
 
 [X.509] https://www.youtube.com/watch?v=JAgaWJivKwg
+
+#### PKI (Public Key Infrastructure)
+
+How does PKI Work?
+
+Public Key Infrastructure uses Public Key Cryptography as the basis for providing encryption which uses asymmetric key algorithms to perform its role in which both communicating parties establish a working relationship by verifying each other’s identities. A framework of encryption that protects communications between the server (your website) and the client by:
+
+- Establishing the identity of endpoints on a network
+- Encrypting the flow of data via the network’s communication channels
+
+Consider the following exchange which enables a server and a web application, for instance, a browser, to communicate with each other:
+
+- When a browser wishes to establish a secure communication channel with a web server, it requests the server to present its public key.
+- The server possesses an asymmetric public key, whose copy it presents to the browser.
+- The browser generates a ‘session key’, a symmetric key that is encrypted using the public key that the server provided. This session key is then passed to the server.
+- The web server, uses its private key to decrypt the session key which was encrypted by its public key by the client. If it is able to do this an encrypted channel with client is opened.
+
+The exchange of public keys before the symmetric encryption channel is established is facilitated by X.509 certificates and CA, only those public keys that have been signed by a Certificate Authority and bound to a certificate are considered acceptable for use online.
 
 
