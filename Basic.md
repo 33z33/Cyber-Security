@@ -150,6 +150,18 @@ The most widely accepted format for Digital Certificates is defined by the CCITT
 
 #### PKI (Public Key Infrastructure)
 
+Terminology Related to PKI
+
+- *Asymmetric Keys* - Two related keys, a public key and a private key, that are used to perform complementary operations, such as
+encryption and decryption or signature generation and signature verification.
+- *Public Key Certificate* - A digital document issued and digitally signed by the private key of a Certification Authority that binds the
+name of a subscriber to a public key. The certificate indicates that the subscriber identified in the certificate
+has sole control and access to the corresponding private key.
+- *Public Key (Asymmetric) Cryptographic Algorithm* - A cryptographic algorithm that uses two related keys, a public key and a private key. The two keys have the
+property that deriving the private key from the public key is computationally infeasible.
+- *Public Key Infrastructure (PKI)* - A set of policies, processes, server platforms, software and workstations used for the purpose of administering certificates and public-private key pairs, including the ability to issue, maintain, and revoke public key
+ certificates.
+ 
 How does PKI Work?
 
 Public Key Infrastructure uses Public Key Cryptography as the basis for providing encryption which uses asymmetric key algorithms to perform its role in which both communicating parties establish a working relationship by verifying each other’s identities. A framework of encryption that protects communications between the server (your website) and the client by:
@@ -166,4 +178,22 @@ Consider the following exchange which enables a server and a web application, fo
 
 The exchange of public keys before the symmetric encryption channel is established is facilitated by X.509 certificates and CA, only those public keys that have been signed by a Certificate Authority and bound to a certificate are considered acceptable for use online.
 
+In broad terms, we can classify the use of **public-key cryptosystems** into
+three categories: 
+
+- ■ Encryption/decryption: The sender encrypts a message with the recipient’s
+public key, and the recipient decrypts the message with the recipient’s private
+key.
+- ■ Digital signature: The sender “signs” a message with its private key. Signing
+is achieved by a cryptographic algorithm applied to the message or to a small
+block of data that is a function of the message.
+
+- ■ Key exchange: Two sides cooperate to exchange a session key, which is a secret
+key for symmetric encryption generated for use for a particular transaction (or
+session) and valid for a short period of time. Several different approaches are
+possible, involving the private key(s) of one or both parties/
+
+Some algorithms are suitable for all three applications, whereas others can be
+used only for one or two of these applications. Eg, `RSA` and `Elliptic Curve` encryption algorithms are suitable for all three applications,
+whereas `DSS` is suitable in only Digital Signature application.
 
