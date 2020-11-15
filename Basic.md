@@ -1,6 +1,8 @@
+[Information and Cyber Security Playlist] https://www.youtube.com/playlist?list=PLYwpaL_SFmcArHtWmbs_vXX6soTK3WEJw
+
 http://www.crypto-it.net/eng/theory/index.html 
 
-[Information and Cyber Security Playlist] https://www.youtube.com/playlist?list=PLYwpaL_SFmcArHtWmbs_vXX6soTK3WEJw
+http://practicalcryptography.com/
 
 
 ---
