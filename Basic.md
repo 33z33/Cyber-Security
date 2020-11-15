@@ -1,3 +1,9 @@
+http://www.crypto-it.net/eng/theory/index.html 
+
+[Information and Cyber Security Playlist] https://www.youtube.com/playlist?list=PLYwpaL_SFmcArHtWmbs_vXX6soTK3WEJw
+
+
+---
 
 CIA Triad The CIA triad in Cryptography 
 
@@ -82,7 +88,7 @@ patterns. **Caeser Cipher** is an example of substitution cipher.
 
 #### Transposition
 
-. A very different kind of mapping is achieved by performing
+A very different kind of mapping is achieved by performing
 some sort of permutation on the plaintext letters. This technique is referred to as a
 transposition cipher.
 The simplest such cipher is the **rail fence technique**, in which the plaintext is
@@ -95,6 +101,34 @@ written down as a sequence of diagonals and then read off as a sequence of rows.
 [Transposition Cipher | Columnar Transposition Technique Explained with Solved Example] https://www.youtube.com/watch?v=KczOjHHb5Nw
 
 ---
+
+### Block vs Stream Cipher
+
+Block Cipher Converts the plain text into cipher text by taking plain text’s block at a time. Eg, DES, AES, Blowfish    	   
+Stream Cipher Converts the plain text into cipher text by taking 1 byte of plain text at a time.  Eg, FISH, RC4    
+
+https://www.geeksforgeeks.org/difference-between-block-cipher-and-stream-cipher
+
+[Block Cipher] https://youtu.be/aGxdQxO0nEo
+
+A block cipher consists of two paired algorithms, one for encryption, E, and the other for decryption, D.[1] Both algorithms accept two inputs: an input block of size n bits and a key of size k bits; and both yield an n-bit output block
+
+[What are stream ciphers] https://ctf101.org/cryptography/what-are-stream-ciphers/
+
+[Stream Cipher] (must watch) https://youtu.be/dOKXCCwlwCk
+
+#### Modes of Block Cipher 
+
+[Block cipher modes of operation] (must read) https://www.geeksforgeeks.org/block-cipher-modes-of-operation/
+
+http://www.crypto-it.net/eng/theory/modes-of-block-ciphers.html
+
+- ECB - Electronic Code Book https://youtu.be/It0KU1kyMUQ
+- CBC - Cipher Block Chaining https://youtu.be/fueyWs92cvs
+- CFB - Cipher Feedback Mode https://youtu.be/QqcctEPQKuU
+- OFB - Output Feedback Mode https://youtu.be/pypos_NnLfM
+- CTR - Counter Mode https://youtu.be/6X1GkaJpBj0
+--- 
 
 ### Hashing and Salting
 
